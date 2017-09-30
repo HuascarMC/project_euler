@@ -6,6 +6,7 @@
 
 def fibonacci(limit, i)
   fibonacci_numbers = []
+  sum = 0
   until (i >= limit)
     if (i == 1)
     i2 = 0
@@ -15,8 +16,15 @@ def fibonacci(limit, i)
     i = i2 + i
     fibonacci_numbers << i
   end
-  return fibonacci_numbers
+    for number in  fibonacci_numbers
+      if (number % 2 == 0)
+        sum += number
+      end
+
+    end
+
+  return sum
 end
 
 
-puts fibonacci(100, 1)
+puts fibonacci(4000000, 1)
